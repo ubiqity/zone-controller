@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ubiqity Zone Controller</title>
+    <script src="car.js"></script>
+    <style>
+        button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    Zone controller<br>
+    <table>
+        <tr>
+            <td></td>
+            <td><button onmouseenter="executeCommand('F')" onmouseleave="executeCommand('S')" ontouchstart="executeCommand('F')" ontouchend="executeCommand('S')">^</button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><button onmouseenter="executeCommand('L')" onmouseleave="executeCommand('S')" ontouchstart="executeCommand('L')" ontouchend="executeCommand('S')">&lt;</button></td>
+            <td><button onclick="executeCommand('S')">X</button><br></td>
+            <td><button onmouseenter="executeCommand('R')" onmouseleave="executeCommand('S')" ontouchstart="executeCommand('R')" ontouchend="executeCommand('S')">></button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onmouseenter="executeCommand('B')" onmouseleave="executeCommand('S')" ontouchstart="executeCommand('B')" ontouchend="executeCommand('S')">v</button></td>
+            <td></td>
+        </tr>
+        <br>
+
+    </table>
+    <br><br>
+    <div id="logdiv"></div>
+    <script>
+        window.addEventListener('keydown', handleKeys);
+    </script>
+</body>
+
+</html>
